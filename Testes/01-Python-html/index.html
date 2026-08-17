@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo PyScript</title>
+    <!-- Importa PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <h1 id="titulo">Texto original</h1>
+
+    <!-- Botão para mudar o texto -->
+    <button py-click="mudar_texto()">Mudar Texto</button>
+
+    <!-- Código Python -->
+    <py-script>
+        from js import document
+
+        def mudar_texto():
+            elemento = document.getElementById("titulo")
+            elemento.innerText = "Texto alterado com Python!"
+    </py-script>
+</body>
+</html>
